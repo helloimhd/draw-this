@@ -4,7 +4,8 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <input class="starter" id="input" placeholder="Enter input"/>
+    <input class="starter" id="input" placeholder="Draw it out now"/>
+    <input class="starter" id="emoji" placeholder="Emoji here"/>
     <h2>output:</h2>
     <div class="starter" id="output"></div>
 <!--     <div class="starter" id="currentSeats"></div>
@@ -13,6 +14,11 @@
       document.querySelector('#input').addEventListener('change', function(event){
         var currentInput = event.target.value;
         inputHappened(currentInput)
+      });
+
+      document.querySelector('#emoji').addEventListener('change', function(event){
+        var emojiInput = event.target.value;
+        emojiHappened(emojiInput)
       });
 
       var display = function( data ){
